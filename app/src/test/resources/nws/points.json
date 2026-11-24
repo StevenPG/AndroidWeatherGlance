@@ -1,0 +1,112 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "s": "https://schema.org/",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#",
+            "geometry": {
+                "@id": "s:GeoCoordinates",
+                "@type": "geo:wktLiteral"
+            },
+            "city": "s:addressLocality",
+            "state": "s:addressRegion",
+            "distance": {
+                "@id": "s:Distance",
+                "@type": "s:QuantitativeValue"
+            },
+            "bearing": {
+                "@type": "s:QuantitativeValue"
+            },
+            "value": {
+                "@id": "s:value"
+            },
+            "unitCode": {
+                "@id": "s:unitCode",
+                "@type": "@id"
+            },
+            "forecastOffice": {
+                "@type": "@id"
+            },
+            "forecastGridData": {
+                "@type": "@id"
+            },
+            "publicZone": {
+                "@type": "@id"
+            },
+            "county": {
+                "@type": "@id"
+            }
+        }
+    ],
+    "id": "https://api.weather.gov/points/39.7817,-89.6501",
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -89.6501,
+            39.7817
+        ]
+    },
+    "properties": {
+        "@id": "https://api.weather.gov/points/39.7817,-89.6501",
+        "@type": "wx:Point",
+        "cwa": "ILX",
+        "type": "land",
+        "forecastOffice": "https://api.weather.gov/offices/ILX",
+        "gridId": "ILX",
+        "gridX": 47,
+        "gridY": 55,
+        "forecast": "https://api.weather.gov/gridpoints/ILX/47,55/forecast",
+        "forecastHourly": "https://api.weather.gov/gridpoints/ILX/47,55/forecast/hourly",
+        "forecastGridData": "https://api.weather.gov/gridpoints/ILX/47,55",
+        "observationStations": "https://api.weather.gov/gridpoints/ILX/47,55/stations",
+        "relativeLocation": {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.644572,
+                    39.7910628
+                ]
+            },
+            "properties": {
+                "city": "Springfield",
+                "state": "IL",
+                "distance": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 0
+                },
+                "bearing": {
+                    "unitCode": "wmoUnit:degree_(angle)",
+                    "value": 0
+                }
+            }
+        },
+        "forecastZone": "https://api.weather.gov/zones/forecast/ILZ051",
+        "county": "https://api.weather.gov/zones/county/ILC167",
+        "fireWeatherZone": "https://api.weather.gov/zones/fire/ILZ051",
+        "timeZone": "America/Chicago",
+        "radarStation": "KILX",
+        "astronomicalData": {
+            "sunrise": "2026-11-23T06:52:26-06:00",
+            "sunset": "2026-11-23T16:37:40-06:00",
+            "transit": "2026-11-23T11:45:03-06:00",
+            "civilTwilightBegin": "2026-11-23T06:23:07-06:00",
+            "civilTwilightEnd": "2026-11-23T17:07:00-06:00",
+            "nauticalTwilightBegin": "2026-11-23T05:50:02-06:00",
+            "nauticalTwilightEnd": "2026-11-23T17:40:04-06:00",
+            "astronomicalTwilightBegin": "2026-11-23T05:17:47-06:00",
+            "astronomicalTwilightEnd": "2026-11-23T18:12:19-06:00"
+        },
+        "nwr": {
+            "transmitter": "WXJ75",
+            "sameCode": "017167",
+            "areaBroadcast": "https://api.weather.gov/radio/WXJ75/broadcast",
+            "pointBroadcast": "https://api.weather.gov/points/39.7817,-89.6501/radio"
+        }
+    }
+}

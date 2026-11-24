@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/day_root"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:focusable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/day_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.Compat.Notification.Info" />
+
+    <ImageView
+        android:id="@+id/day_icon"
+        android:layout_width="@dimen/notification_icon_full"
+        android:layout_height="@dimen/notification_icon_full"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:importantForAccessibility="no"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/day_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.Compat.Notification.Title"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/day_low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.Compat.Notification.Info" />
+
+    <TextView
+        android:id="@+id/day_precip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.Compat.Notification.Info"
+        android:textColor="@color/precip" />
+</LinearLayout>

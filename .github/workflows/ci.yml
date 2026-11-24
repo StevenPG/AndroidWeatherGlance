@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Analyze, test, build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      # Robolectric downloads large Android SDK jars at test time; Maven Central rate-limits
+      # repeated downloads, so keep them in a cache between runs.
+      - name: Cache Robolectric SDK jars
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository/org/robolectric
+          key: robolectric-${{ hashFiles('gradle/libs.versions.toml') }}
+
+      - name: Static analysis (detekt + Android Lint)
+        run: ./gradlew detekt lintDebug
+
+      - name: Unit and render tests
+        run: ./gradlew testDebugUnitTest
+
+      - name: Build debug and minified release
+        run: ./gradlew assembleDebug assembleRelease
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reports
+          path: |
+            build/reports/detekt/
+            app/build/reports/
+            app/build/notification-renders/
+          if-no-files-found: ignore
+
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: weatherglance-debug-apk
+          path: app/build/outputs/apk/debug/*.apk

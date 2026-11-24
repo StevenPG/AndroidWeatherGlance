@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Back up settings (location, schedule) but not the forecast cache, which is cheap to refetch. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="file" path="datastore/settings.json" />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="file" path="datastore/settings.json" />
+    </device-transfer>
+</data-extraction-rules>

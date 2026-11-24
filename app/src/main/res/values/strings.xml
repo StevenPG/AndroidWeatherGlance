@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WeatherGlance</string>
+
+    <!-- Channels -->
+    <string name="channel_forecast_name">Scheduled forecast</string>
+    <string name="channel_forecast_description">Your forecast at the times you choose</string>
+    <string name="channel_alerts_name">Severe weather alerts</string>
+    <string name="channel_alerts_description">National Weather Service watches and warnings for your location</string>
+
+    <!-- Forecast formatting -->
+    <string name="label_today">Today</string>
+    <string name="label_tonight">Tonight</string>
+    <string name="label_tomorrow">Tomorrow</string>
+    <string name="temperature_format">%1$d°</string>
+    <string name="temperature_missing">–</string>
+    <string name="high_low_format">%1$s / %2$s</string>
+    <string name="precip_format">%1$d%%</string>
+    <string name="summary_format">%1$s: %2$s · %3$s</string>
+    <string name="day_time_format">%1$s at %2$s</string>
+    <string name="cd_high">high %1$s</string>
+    <string name="cd_low">low %1$s</string>
+    <plurals name="cd_precip">
+        <item quantity="one">%1$d percent chance of precipitation</item>
+        <item quantity="other">%1$d percent chance of precipitation</item>
+    </plurals>
+
+    <!-- Notification -->
+    <!-- The header timestamp already shows when the forecast was fetched. -->
+    <string name="notification_saved_forecast">Saved forecast</string>
+    <string name="alert_banner">⚠ %1$s %2$s</string>
+    <string name="alert_until">until %1$s</string>
+    <string name="action_refresh">Refresh</string>
+
+    <!-- Home -->
+    <string name="home_updated">Updated %1$s</string>
+    <string name="home_no_data">No forecast yet. Pull down to refresh.</string>
+    <string name="home_details_title">Details</string>
+    <string name="home_next_notification">Next notification</string>
+    <string name="home_no_notification_scheduled">None scheduled</string>
+    <string name="action_notify_now">Notify now</string>
+    <string name="action_change">Change</string>
+    <string name="action_choose_location">Choose a location</string>
+    <string name="alert_tap_for_details">Tap for details</string>
+    <string name="empty_title">Where should we look?</string>
+    <string name="empty_body">Pick a US city or ZIP code and WeatherGlance will send its forecast at the times you choose.</string>
+    <string name="attribution">Forecast data from the National Weather Service (weather.gov)</string>
+    <string name="permission_title">Notifications are off</string>
+    <string name="permission_body">WeatherGlance needs notification access to deliver your scheduled forecast.</string>
+    <string name="permission_action">Turn on notifications</string>
+
+    <!-- Messages -->
+    <string name="message_sent">Forecast notification sent</string>
+    <string name="message_sent_cached">Offline. Sent the most recent saved forecast.</string>
+    <string name="message_choose_location">Choose a location first</string>
+    <string name="message_notifications_blocked">Notifications are turned off for WeatherGlance</string>
+    <string name="error_network">Couldn\'t reach the weather service. Check your connection.</string>
+    <string name="error_nws">The National Weather Service is having trouble. Try again shortly.</string>
+    <string name="error_unsupported_location">The National Weather Service only covers the US and its territories.</string>
+    <string name="error_geocoder_unavailable">City search isn\'t available on this device.</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_location">Location</string>
+    <string name="settings_location_none">Not set</string>
+    <string name="settings_location_change">Tap to change</string>
+    <string name="settings_section_notifications">Forecast notifications</string>
+    <string name="settings_notifications_enabled">Scheduled forecast</string>
+    <string name="settings_notifications_enabled_body">Three days at a glance; expand for five</string>
+    <string name="settings_times">Times</string>
+    <string name="settings_times_empty">Add a time to start receiving forecasts.</string>
+    <string name="settings_add_time">Add time</string>
+    <string name="settings_days">Days</string>
+    <string name="settings_system_notification_settings">Sound &amp; display</string>
+    <string name="settings_section_units">Units</string>
+    <string name="unit_fahrenheit">°F</string>
+    <string name="unit_celsius">°C</string>
+    <string name="settings_section_alerts">Severe weather</string>
+    <string name="settings_alerts_enabled">Weather alerts</string>
+    <string name="settings_alerts_enabled_body">Checks NWS about once an hour and notifies you of new alerts</string>
+    <string name="settings_alert_severity">Notify for alerts at least</string>
+    <string name="settings_alert_severity_hint">Severe includes most warnings (tornado, winter storm). Moderate adds advisories.</string>
+    <string name="severity_moderate">Moderate</string>
+    <string name="severity_severe">Severe</string>
+    <string name="severity_extreme">Extreme</string>
+    <string name="settings_section_about">About</string>
+    <string name="settings_version">Version %1$s</string>
+    <string name="cd_remove_time">Remove time</string>
+    <string name="action_add">Add</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_back">Back</string>
+    <string name="action_clear">Clear</string>
+
+    <!-- Location -->
+    <string name="location_title">Choose location</string>
+    <string name="location_hint">City, state or ZIP code</string>
+    <string name="location_coverage_note">Forecasts come from the National Weather Service, which covers the US and its territories.</string>
+    <string name="location_no_results">No matching US locations</string>
+
+    <!-- Widget -->
+    <string name="widget_label">Forecast</string>
+    <string name="widget_description">Your forecast at a glance</string>
+    <string name="widget_setup">Tap to choose a location</string>
+    <string name="widget_loading">Loading forecast…</string>
+</resources>
